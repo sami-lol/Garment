@@ -15,7 +15,7 @@ class Garment {
     public double price;
     public int stockQuantity;
 
-    // Constructor
+    
     public Garment(String id, String name, String description, String size, String color, double price, int stockQuantity) {
         this.id = id;
         this.name = name;
@@ -43,7 +43,7 @@ class Fabric {
     public String color;
     public double pricePerMeter;
 
-    // Constructor
+
     public Fabric(String id, String type, String color, double pricePerMeter) {
         this.id = id;
         this.type = type;
@@ -63,7 +63,7 @@ class Supplier {
     public String contactInfo;
     List<Fabric> suppliedFabric = new ArrayList<>();
 
-    // Constructor
+    
     public Supplier(String id, String name, String contactInfo) {
         this.id = id;
         this.name = name;
@@ -86,7 +86,6 @@ class Order {
     public List<Garment> garments = new ArrayList<>();
     private double totalAmount;
 
-    // Constructor
     public Order(String orderId, Date orderDate) {
         this.orderId = orderId;
         this.orderDate = orderDate;
@@ -126,7 +125,6 @@ class Customer {
     public String phone;
     List<Order> orders = new ArrayList<>();
 
-    // Constructor
     public Customer(String customerId, String name, String email, String phone) {
         this.customerId = customerId;
         this.name = name;
