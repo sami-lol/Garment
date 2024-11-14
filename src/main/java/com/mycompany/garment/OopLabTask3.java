@@ -82,14 +82,14 @@ class Order {
     }
 
     void printOrderDetails() {
-        System.out.println("--------------------------");
-        System.out.println("Order Details");
-        System.out.println("--------------------------");
+        System.out.println("------------------------");
+        System.out.println(" your Order Details");
+        System.out.println("------------------------");
         for (Garment g : garments) {
-            System.out.println("Name: " + g.name);
-            System.out.println("Price: " + g.price);
+            System.out.println("your Name: " + g.name);
+            System.out.println("product Price: " + g.price);
             System.out.println("Description: " + g.description);
-            System.out.println("--------------------------");
+            System.out.println("------------------------");
         }
         System.out.println("Total Amount: " + calculateTotalAmount());
     }
@@ -113,7 +113,7 @@ class Customer {
     void placeOrder(Order order) {
         orders.add(order);
         order.printOrderDetails();
-        System.out.println("Order Placed Successfully.");
+        System.out.println("your Order Placed Successfully.");
     }
 
     List<Order> viewOrders() {
@@ -158,7 +158,7 @@ public class OopLabTask3 {
     public static void main(String[] args) {
         boolean running = true;
         while (running) {
-            System.out.println("\n--- Garment Management System ---");
+            System.out.println("\n----- Garment Management System -----");
             System.out.println("1. Add Garment");
             System.out.println("2. View Garments");
             System.out.println("3. Place Order");
@@ -168,7 +168,7 @@ public class OopLabTask3 {
             System.out.print("Select an option: ");
             
             int choice = scanner.nextInt();
-            scanner.nextLine();  // Consume newline
+            scanner.nextLine(); 
             
             switch (choice) {
                 case 1 -> addGarment();
@@ -191,18 +191,18 @@ public class OopLabTask3 {
         String name = scanner.nextLine();
         System.out.print("Enter Description: ");
         String description = scanner.nextLine();
-        System.out.print("Enter Size: ");
+        System.out.print("Enter the Size: ");
         String size = scanner.nextLine();
         System.out.print("Enter Color: ");
         String color = scanner.nextLine();
-        System.out.print("Enter Price: ");
+        System.out.print("Enter the Price: ");
         double price = scanner.nextDouble();
-        System.out.print("Enter Stock Quantity: ");
+        System.out.print("Enter the Stock Quantity: ");
         int stockQuantity = scanner.nextInt();
         
         Garment garment = new Garment(id, name, description, size, color, price, stockQuantity);
         inventory.addGarment(garment);
-        System.out.println("Garment added successfully!");
+        System.out.println("The Garment added successfully!");
     }
     
     private static void placeOrder() {
@@ -213,9 +213,9 @@ public class OopLabTask3 {
         if (customer == null) {
             System.out.print("Enter Customer Name: ");
             String name = scanner.nextLine();
-            System.out.print("Enter Email: ");
+            System.out.print("Enter your Email: ");
             String email = scanner.nextLine();
-            System.out.print("Enter Phone: ");
+            System.out.print("Enter your Phone: ");
             String phone = scanner.nextLine();
             customer = new Customer(customerId, name, email, phone);
             customers.add(customer);
@@ -234,7 +234,7 @@ public class OopLabTask3 {
                 order.addGarment(garment);
                 System.out.println("Garment added to order.");
             } else {
-                System.out.println("Garment not found.");
+                System.out.println(" The Garment not found.");
             }
             System.out.print("Enter another Garment ID (or 'done' to finish): ");
         }
