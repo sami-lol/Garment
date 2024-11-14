@@ -56,28 +56,6 @@ class Fabric {
     }
 }
 
-class Supplier {
-
-    public String id;
-    public String name;
-    public String contactInfo;
-    List<Fabric> suppliedFabric = new ArrayList<>();
-
-    
-    public Supplier(String id, String name, String contactInfo) {
-        this.id = id;
-        this.name = name;
-        this.contactInfo = contactInfo;
-    }
-
-    void addFabric(Fabric fabric) {
-        suppliedFabric.add(fabric);
-    }
-
-    List<Fabric> getSuppliedFabrics() {
-        return suppliedFabric;
-    }
-}
 
 class Order {
 
